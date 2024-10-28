@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jonathan Kim's Portfolio</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="src/styles.css">
+  <!-- Main JavaScript -->
+  <script defer type="module" src="src/main.js"></script>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Background Images Container -->
+  <div id="background">
+    <div class="scrolling-images">
+      <!-- Original Set of Images -->
+      <img src="src/images/image1.jpg" alt="Background Image 1" loading="lazy">
+      <img src="src/images/image2.jpeg" alt="Background Image 2" loading="lazy">
+      <img src="src/images/image3.jpeg" alt="Background Image 3" loading="lazy">
+      <img src="src/images/image4.jpg" alt="Background Image 4" loading="lazy">
+      <img src="src/images/image5.jpeg" alt="Background Image 5" loading="lazy">
+      <img src="src/images/image6.jpeg" alt="Background Image 6" loading="lazy">
+      <img src="src/images/image7.jpg" alt="Background Image 7" loading="lazy">
+      <img src="src/images/image8.jpg" alt="Background Image 8" loading="lazy">
+      <img src="src/images/image9.jpg" alt="Background Image 9" loading="lazy">
+      <img src="src/images/image10.jpg" alt="Background Image 10" loading="lazy">
+      <img src="src/images/image11.jpeg" alt="Background Image 11" loading="lazy">
+      <img src="src/images/image12.jpeg" alt="Background Image 12" loading="lazy">
+      <img src="src/images/image13.jpeg" alt="Background Image 13" loading="lazy">
+      <img src="src/images/image14.jpeg" alt="Background Image 14" loading="lazy">
+      <img src="src/images/image15.jpg" alt="Background Image 15" loading="lazy">
+      <img src="src/images/image16.jpg" alt="Background Image 16" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="content" class="relative z-10 flex flex-col items-center justify-center h-screen text-center">
+    <h1 class="text-6xl font-bold non-selectable">Jonathan Kim</h1>
+    <p id="dynamic-tagline" class="text-2xl mt-4 non-selectable">Junior Computer Science Major</p>
+    <nav class="mt-8">
+      <a href="#" id="about-button" class="nav-button">About Me</a>
+      <a href="#" id="projects-button" class="nav-button">Projects</a>
+      <a href="#" id="socials-button" class="nav-button">Socials</a>
+    </nav>
+  </div>
+
+  <!-- About Me Modal -->
+  <div id="about-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" data-modal="about-modal">&times;</span>
+      <h2>About Me</h2>
+      <!-- Typing Text -->
+      <p class="typing-text" data-content="I’m currently a junior majoring in Computer Science at the University of Texas at El Paso. I started off studying Biology at Baylor University for three years, but I realized it wasn’t what I truly enjoyed doing. So, I took a year off to travel and reflect, and I love what I do now."></p>
+      <p class="typing-text" data-content="I was born in New York, moved to Arizona, and eventually ended up here in El Paso. Outside of coding and studying, I enjoy playing video games, traveling, golfing, and drinking boba while listening to music."></p>
+      <p class="typing-text" data-content="You can find my resume attached below!"
+      <!-- Resume Buttons -->
+      <div class="resume-button-container">
+        <a href="src/documents/Jonathan_Kim_Resume.pdf" target="_blank" class="resume-button">View Resume</a>
+        <a href="src/documents/Jonathan_Kim_Resume.pdf" download class="resume-button">Download Resume</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects Modal -->
+  <div id="projects-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" data-modal="projects-modal">&times;</span>
+      <h2>Projects</h2>
+      <!-- Typing Text -->
+      <p class="typing-text" data-content="Here are some of the projects I've worked on:"></p>
+      <!-- Project List -->
+      <div class="project-list">
+        <!-- Project Item -->
+        <div class="project-item">
+          <h3>DUI Risk Radar</h3>
+          <p>Created during the BorderHack Hackathon, this project aims to reduce global road accident deaths by visualizing DUI data and enabling real-time reporting.</p>
+        </div>
+        <!-- Project Item -->
+        <div class="project-item">
+          <h3>Snap Market</h3>
+          <p>An app built to enhance TikTok's user experience by enabling product searches directly from video content.</p>
+        </div>
+        <!-- Project Item -->
+        <div class="project-item">
+          <h3>Poke Generator</h3>
+          <p>A fine-tuned Stable Diffusion 2 model designed to generate Pokémon that actually look like Pokémon, addressing the limitations of the original model.</p>
+        </div>
+        <!-- Add more project items as needed -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Socials Modal -->
+  <div id="socials-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" data-modal="socials-modal">&times;</span>
+      <h2>Connect with Me</h2>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/jonathan-kim-j1k3/" target="_blank">
+          <i class="fab fa-linkedin fa-3x"></i>
+        </a>
+        <a href="https://github.com/jonkim13" target="_blank">
+          <i class="fab fa-github fa-3x"></i>
+        </a>
+        <a href="mailto:jon.kim.mj@gmail.com">
+          <i class="fas fa-envelope fa-3x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
