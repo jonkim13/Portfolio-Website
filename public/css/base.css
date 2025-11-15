@@ -592,3 +592,86 @@ a:focus-visible {
   border-left: 0;
   border-top: 0;
 }
+
+/* ============ MOBILE LAYOUT ============ */
+@media (max-width: 768px) {
+  /* Main color nav (bottom) */
+  .nav {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 1rem;
+
+    /* shrink and allow horizontal scroll */
+    gap: 0.75rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-link {
+    padding: 0.45rem 0.9rem;
+    font-size: 11px;
+    row-gap: 0.2rem;
+    white-space: nowrap; /* keep each button on one line */
+  }
+
+  .nav-value,
+  .nav-meta {
+    font-size: 10px;
+  }
+
+  .nav-corner {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Make sure the scroll indicator and cover don't collide with nav */
+  .cover {
+    padding-bottom: 4rem;
+  }
+
+  /* -------- Footer + footer nav -------- */
+
+  .footer {
+    height: auto;            /* let it grow with content */
+    min-height: 100vh;       /* still fill the screen */
+    font-size: 2.4vh;        /* smaller text on mobile */
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .footer p {
+    max-width: 32ch;
+  }
+
+  .footer-nav-wrapper {
+    margin-top: 1.75rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 1rem;
+  }
+
+  .footer-nav {
+    gap: 0.75rem;
+  }
+
+  .footer-nav-link {
+    padding: 0.45rem 0.9rem;
+    font-size: 11px;
+    row-gap: 0.2rem;
+    white-space: nowrap;
+  }
+
+  .footer-nav-corners .nav-corner {
+    width: 8px;
+    height: 8px;
+  }
+}
